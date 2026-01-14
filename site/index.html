@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalFirstApp | The Future of User-Centric Software</title>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --text: #f8fafc;
+            --accent: #6366f1;
+            --secondary: #94a3b8;
+            --card-bg: #111114;
+            --border: #1e293b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text);
+        }
+
+        .logo span { color: var(--accent); }
+
+        /* Hero Section */
+        header {
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: border 0.3s ease;
+        }
+
+        .card:hover { border-color: var(--accent); }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--secondary);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #475569;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header { animation: fadeInUp 0.8s ease-out; }
+        .features { animation: fadeInUp 1.2s ease-out; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">localfirst<span>app</span></div>
+        <div>
+            <a href="https://github.com/localfirstapp" style="color: var(--secondary); text-decoration: none; font-size: 0.9rem;">GitHub</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Fast. Private. <br>Reliable by Default.</h1>
+        <p class="subtitle">Empowering users through <b>local-first</b> architecture. No more loading spinners, no more data silos, and no more "offline" mode as an afterthought.</p>
+        <div style="margin-top: 1rem;">
+            <a href="https://github.com/localfirstapp" class="cta-button">Explore Repositories</a>
+        </div>
+    </header>
+
+    <div class="features">
+        <div class="card">
+            <h3>⚡️ Instant Response</h3>
+            <p>Your data is on your device. Zero network latency means your interactions are handled at the speed of light, not the speed of your Wi-Fi.</p>
+        </div>
+        <div class="card">
+            <h3>✈️ Work Everywhere</h3>
+            <p>Offline is a first-class citizen. Whether on a plane or in a tunnel, your app remains fully functional and syncs seamlessly when you're back online.</p>
+        </div>
+        <div class="card">
+            <h3>🔐 Data Ownership</h3>
+            <p>End the era of "renting" your data from the cloud. Your information stays under your control, encrypted and private by design.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 localfirstapp. Built for the next generation of software.
+    </footer>
+
+</body>
+</html>
