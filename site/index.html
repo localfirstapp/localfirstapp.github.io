@@ -1,177 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LocalFirstApp | The Future of User-Centric Software</title>
-    <style>
-        :root {
-            --bg: #0a0a0c;
-            --text: #f8fafc;
-            --accent: #6366f1;
-            --secondary: #94a3b8;
-            --card-bg: #111114;
-            --border: #1e293b;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LocalFirstApp | The Future of User-Centric Software</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="/images/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/images/site.webmanifest" />
+        <style>
+            :root {
+                --bg: #0a0a0c;
+                --text: #f8fafc;
+                --accent: #6366f1;
+                --secondary: #94a3b8;
+                --card-bg: #111114;
+                --border: #1e293b;
+            }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', -apple-system, system-ui, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    system-ui,
+                    sans-serif;
+                background-color: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
 
-        /* Nav */
-        nav {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+            /* Nav */
+            nav {
+                padding: 1.5rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: var(--text);
-        }
+            .logo {
+                font-size: 1.25rem;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+                color: var(--text);
+            }
 
-        .logo span { color: var(--accent); }
+            .logo span {
+                color: var(--accent);
+            }
 
-        /* Hero Section */
-        header {
-            height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 1.5rem;
-        }
+            /* Hero Section */
+            header {
+                height: 75vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 0 1.5rem;
+            }
 
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+            h1 {
+                font-size: clamp(2.5rem, 8vw, 4.5rem);
+                font-weight: 800;
+                margin-bottom: 1.5rem;
+                line-height: 1.1;
+                background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-        p.subtitle {
-            font-size: 1.25rem;
-            color: var(--secondary);
-            max-width: 700px;
-            margin-bottom: 2.5rem;
-        }
+            p.subtitle {
+                font-size: 1.25rem;
+                color: var(--secondary);
+                max-width: 700px;
+                margin-bottom: 2.5rem;
+            }
 
-        .cta-button {
-            background-color: var(--accent);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
+            .cta-button {
+                background-color: var(--accent);
+                color: white;
+                padding: 0.8rem 2rem;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
 
-        .cta-button:hover {
-            box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
-            transform: translateY(-2px);
-        }
+            .cta-button:hover {
+                box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+                transform: translateY(-2px);
+            }
 
-        /* Features */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto 5rem auto;
-            padding: 0 2rem;
-        }
+            /* Features */
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 1.5rem;
+                max-width: 1100px;
+                margin: 0 auto 5rem auto;
+                padding: 0 2rem;
+            }
 
-        .card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            transition: border 0.3s ease;
-        }
+            .card {
+                background: var(--card-bg);
+                padding: 2.5rem;
+                border-radius: 16px;
+                border: 1px solid var(--border);
+                transition: border 0.3s ease;
+            }
 
-        .card:hover { border-color: var(--accent); }
+            .card:hover {
+                border-color: var(--accent);
+            }
 
-        .card h3 {
-            margin-top: 0;
-            font-size: 1.4rem;
-            color: #fff;
-        }
+            .card h3 {
+                margin-top: 0;
+                font-size: 1.4rem;
+                color: #fff;
+            }
 
-        .card p {
-            color: var(--secondary);
-            font-size: 0.95rem;
-        }
+            .card p {
+                color: var(--secondary);
+                font-size: 0.95rem;
+            }
 
-        footer {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: #475569;
-            font-size: 0.85rem;
-            border-top: 1px solid #1e293b;
-        }
+            /* Community Section */
+            .community {
+                text-align: center;
+                padding: 4rem 2rem;
+                max-width: 1100px;
+                margin: 0 auto;
+                border-top: 1px solid var(--border);
+            }
 
-        /* Animation */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+            .community h2 {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                color: #fff;
+            }
 
-        header { animation: fadeInUp 0.8s ease-out; }
-        .features { animation: fadeInUp 1.2s ease-out; }
+            .community-links {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
 
-    </style>
-</head>
-<body>
+            .community-link {
+                color: var(--secondary);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                padding: 0.6rem 1.2rem;
+                border-radius: 8px;
+                border: 1px solid var(--border);
+                background: var(--card-bg);
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-weight: 500;
+            }
 
-    <nav>
-        <div class="logo">localfirst<span>app</span></div>
-        <div>
-            <a href="https://github.com/localfirstapp" style="color: var(--secondary); text-decoration: none; font-size: 0.9rem;">GitHub</a>
+            .community-link svg {
+                width: 18px;
+                height: 18px;
+                fill: currentColor;
+                opacity: 0.9;
+            }
+
+            .community-link:hover {
+                color: var(--accent);
+                border-color: var(--accent);
+                transform: translateY(-2px);
+            }
+
+            footer {
+                text-align: center;
+                padding: 4rem 2rem;
+                color: #475569;
+                font-size: 0.85rem;
+                border-top: 1px solid #1e293b;
+            }
+
+            /* Animation */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            header {
+                animation: fadeInUp 0.8s ease-out;
+            }
+            .features {
+                animation: fadeInUp 1.2s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a
+                href="/"
+                class="logo"
+                style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-decoration: none;
+                "
+            >
+                <img
+                    src="images/logo.svg"
+                    alt="LocalFirstApp Logo"
+                    width="32"
+                    height="32"
+                />
+                LocalFirst<span>app</span>
+            </a>
+
+            <div>
+                <a
+                    href="https://github.com/localfirstapp"
+                    style="
+                        color: var(--secondary);
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                    "
+                    >GitHub</a
+                >
+            </div>
+        </nav>
+
+        <header>
+            <div style="margin-bottom: 2rem">
+                <img
+                    src="images/logo.svg"
+                    alt="LocalFirstApp Logo"
+                    width="120"
+                    height="120"
+                    style="
+                        filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
+                    "
+                />
+            </div>
+            <h1>Fast. Private. <br />Reliable by Default.</h1>
+            <p class="subtitle">
+                Empowering users through <b>local-first</b> architecture. No
+                more loading spinners, no more data silos, and no more "offline"
+                mode as an afterthought.
+            </p>
+            <div style="margin-top: 1rem">
+                <a href="https://github.com/localfirstapp" class="cta-button"
+                    >Explore Repositories</a
+                >
+            </div>
+        </header>
+
+        <div class="features">
+            <div class="card">
+                <h3>⚡️ Instant Response</h3>
+                <p>
+                    Your data is on your device. Zero network latency means your
+                    interactions are handled at the speed of light, not the
+                    speed of your Wi-Fi.
+                </p>
+            </div>
+            <div class="card">
+                <h3>✈️ Work Everywhere</h3>
+                <p>
+                    Offline is a first-class citizen. Whether on a plane or in a
+                    tunnel, your app remains fully functional and syncs
+                    seamlessly when you're back online.
+                </p>
+            </div>
+            <div class="card">
+                <h3>🔐 Data Ownership</h3>
+                <p>
+                    End the era of "renting" your data from the cloud. Your
+                    information stays under your control, encrypted and private
+                    by design.
+                </p>
+            </div>
         </div>
-    </nav>
 
-    <header>
-        <h1>Fast. Private. <br>Reliable by Default.</h1>
-        <p class="subtitle">Empowering users through <b>local-first</b> architecture. No more loading spinners, no more data silos, and no more "offline" mode as an afterthought.</p>
-        <div style="margin-top: 1rem;">
-            <a href="https://github.com/localfirstapp" class="cta-button">Explore Repositories</a>
+        <div class="community">
+            <h2>Join the Discussion</h2>
+            <div class="community-links">
+                <a
+                    href="https://t.me/localfirstapp"
+                    class="community-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.213-2.936 1.192z"
+                        />
+                    </svg>
+                    Telegram
+                </a>
+                <a
+                    href="https://github.com/orgs/localfirstapp/discussions"
+                    class="community-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                        />
+                    </svg>
+                    GitHub Discussions
+                </a>
+                <a
+                    href="https://github.com/orgs/localfirstapp/discussions/1"
+                    class="community-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"
+                        />
+                        <path
+                            d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.5.5 0 0 0-.032.14.19.19 0 0 0 .193.193q.06 0 .111-.029l1.268-.733a.6.6 0 0 1 .308-.088q.088 0 .171.025a6.8 6.8 0 0 0 1.625.26 4.5 4.5 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02l.15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0"
+                        />
+                    </svg>
+                    微信群
+                </a>
+            </div>
         </div>
-    </header>
 
-    <div class="features">
-        <div class="card">
-            <h3>⚡️ Instant Response</h3>
-            <p>Your data is on your device. Zero network latency means your interactions are handled at the speed of light, not the speed of your Wi-Fi.</p>
-        </div>
-        <div class="card">
-            <h3>✈️ Work Everywhere</h3>
-            <p>Offline is a first-class citizen. Whether on a plane or in a tunnel, your app remains fully functional and syncs seamlessly when you're back online.</p>
-        </div>
-        <div class="card">
-            <h3>🔐 Data Ownership</h3>
-            <p>End the era of "renting" your data from the cloud. Your information stays under your control, encrypted and private by design.</p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 localfirstapp. Built for the next generation of software.
-    </footer>
-
-</body>
+        <footer>
+            &copy; 2026 localfirstapp. Built for the next generation of
+            software.
+        </footer>
+    </body>
 </html>
