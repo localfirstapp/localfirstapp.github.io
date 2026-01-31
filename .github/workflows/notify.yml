@@ -1,0 +1,30 @@
+name: Created Notification
+on:
+  issues:
+    types: [opened]
+  discussion:
+    types: [created]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'jiacai2050'
+    steps:
+      - name: Send to localfirstapp
+        uses: jiacai2050/telegraph-action@v1
+        id: telegraph
+        with:
+          token: ${{ secrets.TELEGRAPH_TOKEN }}
+          telegram-token: ${{ secrets.TELEGRAM_TOKEN }}
+          chat-id: "@localfirstapp"
+          author-name: "jiacai2050"
+          title: ${{ github.event.issue.title || github.event.discussion.title }}
+          author-url: ${{ github.event.issue.html_url || github.event.discussion.html_url }}
+          body: ${{ github.event.issue.body || github.event.discussion.body }}
+
+      - run: |
+          echo "Telegraph Post URL: ${{ steps.telegraph.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "Title: ${{ steps.telegraph.outputs.title }}" >> $GITHUB_STEP_SUMMARY
+          echo "Description: ${{ steps.telegraph.outputs.description }}" >> $GITHUB_STEP_SUMMARY
+          echo "Path: ${{ steps.telegraph.outputs.path }}" >> $GITHUB_STEP_SUMMARY
