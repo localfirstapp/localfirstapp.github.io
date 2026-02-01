@@ -51,3 +51,4 @@
 ## 示例
 
 - [Flameshot](./image/flameshot.md)
+- [Flauth](./security/flauth.md)
