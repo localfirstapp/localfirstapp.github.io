@@ -33,6 +33,15 @@
 *   **改进文档**：纠正错误、补充分类标签或完善描述。
 *   **分享见解**：欢迎提交翻译、使用案例分析或技术对比文章。
 
+## 目录导航
+
+我们正在构建以下领域的精选列表：
+
+*   **🧠 生产力**：[知识管理](./notes/README.md) / [办公协作](./collaboration/README.md) / [开发工具](./development/README.md)
+*   **🎨 创意生活**：[图形图像](./graphics/README.md) / [影音媒体](./media/README.md) / [财务管理](./finance/README.md)
+*   **🛠️ 实用工具**：[安全隐私](./security/README.md) / [文件传输](./transfer/README.md) / [系统工具](./system/README.md)
+*   **🤖 未来科技**：[智能家居](./smarthome/README.md) / [人工智能](./ai/README.md)
+
 ## 社群项目
 
 我们不仅是观察者，更是创造者。
