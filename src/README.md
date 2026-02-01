@@ -2,7 +2,7 @@
 <center>
 <img src="./_assets/logo.svg" width=120 height=120 style="filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));"/>
 </center>
-                
+
 **Local-first（本地优先）** 是一种回归用户本位的软件设计理念。它不仅仅关乎技术，更关乎数字世界的自由与尊严。我们相信：
 
 - **数据主权**：数据属于你，而非云端服务商。它应首先保存在你的设备上，你可以随时导出、迁移或自行托管。
@@ -37,10 +37,10 @@
 
 我们正在构建以下领域的精选列表：
 
-*   **🧠 生产力**：[知识管理](./notes/README.md) / [办公协作](./collaboration/README.md) / [开发工具](./development/README.md)
-*   **🎨 创意生活**：[图形图像](./graphics/README.md) / [影音媒体](./media/README.md) / [财务管理](./finance/README.md)
-*   **🛠️ 实用工具**：[安全隐私](./security/README.md) / [文件传输](./transfer/README.md) / [系统工具](./system/README.md)
-*   **🤖 未来科技**：[智能家居](./smarthome/README.md) / [人工智能](./ai/README.md)
+*   **🧠 生产力**：[知识管理](./notes) / [办公协作](./collaboration) / [开发工具](./development)
+*   **🎨 创意生活**：[图形图像](./graphics) / [影音媒体](./media) / [财务管理](./finance)
+*   **🛠️ 实用工具**：[安全隐私](./security) / [文件传输](./transfer) / [系统工具](./system)
+*   **🤖 未来科技**：[智能家居](./smarthome) / [人工智能](./ai)
 
 ## 社群项目
 
