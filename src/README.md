@@ -1,4 +1,4 @@
-# LocalFirstApp
+# LocalFirst
 <center>
 <img src="./_assets/logo.svg" width=120 height=120 style="filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));"/>
 </center>

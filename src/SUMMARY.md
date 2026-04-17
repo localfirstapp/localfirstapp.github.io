@@ -18,6 +18,8 @@
   - [Flameshot](./graphics/flameshot.md)
 
 - [影音媒体](./media/README.md)
+  - [VLC](./media/vlc.md)
+  - [Calibre](./media/calibre.md)
 
 - [财务管理](./finance/README.md)
   - [Actual Budget](./finance/actual.md)
@@ -31,6 +33,7 @@
   - [LocalSend](./transfer/localsend.md)
 
 - [系统工具](./system/README.md)
+  - [Restic](./system/restic.md)
 
 ---
 
