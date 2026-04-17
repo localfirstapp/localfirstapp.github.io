@@ -37,3 +37,4 @@
 - [智能家居](./smarthome/README.md)
 
 - [人工智能](./ai/README.md)
+  - [ai-menshen](./ai/ai-menshen.md)
